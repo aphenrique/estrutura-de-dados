@@ -3,12 +3,12 @@ package queue;
 public class MainQueue {
 
     public static void main(String[] args) {
-        Queue myQueue = new Queue();
+        Queue<String> myQueue = new Queue<String>();
 
-        myQueue.enqueue(new Node("Primeiro"));
-        myQueue.enqueue(new Node("Segundo"));
-        myQueue.enqueue(new Node("Terceiro"));
-        myQueue.enqueue(new Node("Quarto"));
+        myQueue.enqueue("Primeiro");
+        myQueue.enqueue("Segundo");
+        myQueue.enqueue("Terceiro");
+        myQueue.enqueue("Quarto");
 
         System.out.println(myQueue);
         

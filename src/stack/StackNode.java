@@ -1,12 +1,12 @@
 package stack;
 
-public class Node {
+public class StackNode {
     private int value;
-    private Node previousNode = null;
+    private StackNode previousNode = null;
 
-    public Node(){};
+    public StackNode(){};
 
-    public Node(int value){
+    public StackNode(int value){
         this.value = value;
     }
 
@@ -18,10 +18,10 @@ public class Node {
         this.value = value;
     }
 
-    public Node getPreviousNode() {
+    public StackNode getPreviousNode() {
         return previousNode;
     }
-    public void setPreviousNode(Node node) {
+    public void setPreviousNode(StackNode node) {
         this.previousNode = node;
     }
 

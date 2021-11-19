@@ -6,7 +6,7 @@ public class NodeMain {
         Stack myStack = new Stack();
 
         for (int i = 1; i <= 10; i++) {
-            myStack.push(new Node(i));
+            myStack.push(new StackNode(i));
         }
 
         System.out.println(myStack.toString());
@@ -15,7 +15,7 @@ public class NodeMain {
 
         System.out.println(myStack.toString());
 
-        myStack.push(new Node(99));
+        myStack.push(new StackNode(99));
     }
 
 }

@@ -2,25 +2,25 @@ package stack;
 
 public class Stack {
     
-    private Node refStackTopNode;
+    private StackNode refStackTopNode;
 
     public Stack(){
         this.refStackTopNode = null;
     }
 
-    public Node top(){
+    public StackNode top(){
         return refStackTopNode;
     }
 
-    public void push(Node newNode){
-        Node refAuxNode = refStackTopNode;
+    public void push(StackNode newNode){
+        StackNode refAuxNode = refStackTopNode;
         refStackTopNode = newNode;
         refStackTopNode.setPreviousNode(refAuxNode);
     }
 
-    public Node pop(){
+    public StackNode pop(){
         if (!isEmpty()){
-            Node nodePoped = refStackTopNode;
+            StackNode nodePoped = refStackTopNode;
             refStackTopNode = refStackTopNode.getPreviousNode();
             return nodePoped;
         }
@@ -35,7 +35,7 @@ public class Stack {
     public String toString() {
         String output = "=============== STACK ===============\n";
 
-        Node auxNode = refStackTopNode;
+        StackNode auxNode = refStackTopNode;
 
         while(true){
             if ( auxNode != null ){

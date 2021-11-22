@@ -1,13 +1,13 @@
 package queue;
 
-public class Node<T> {
+public class QueueNode<T> {
 
     private T object;
-    private Node<T> refNode = null;
+    private QueueNode<T> refNode = null;
 
-    Node(){}
+    QueueNode(){}
 
-    Node(T object){
+    QueueNode(T object){
         this.object = object;
     }
     
@@ -19,11 +19,11 @@ public class Node<T> {
         this.object = object;
     }
     
-    public Node<T> getRefNode() {
+    public QueueNode<T> getRefNode() {
         return refNode;
     }
     
-    public void setRefNode(Node<T> refNode) {
+    public void setRefNode(QueueNode<T> refNode) {
         this.refNode = refNode;
     }
     

@@ -2,14 +2,14 @@ package queue;
 
 public class Queue<T> {
 
-    private Node<T> refInQueueNode = null;
+    private QueueNode<T> refInQueueNode = null;
 
     public boolean isEmpty() {
         return refInQueueNode == null ? true : false;
     }
 
     public void enqueue(T object) {
-        Node<T> newNode = new Node<T>(object);
+        QueueNode<T> newNode = new QueueNode<T>(object);
         newNode.setRefNode(refInQueueNode);
         refInQueueNode = newNode;
     }
@@ -18,7 +18,7 @@ public class Queue<T> {
 
         if (!this.isEmpty()) {
 
-            Node<T> firstNode = refInQueueNode;
+            QueueNode<T> firstNode = refInQueueNode;
 
             while (true) {
                 if (firstNode.getRefNode() != null) {
@@ -38,8 +38,8 @@ public class Queue<T> {
 
         if (!this.isEmpty()) {
 
-            Node<T> firstNode = refInQueueNode;
-            Node<T> auxNode = refInQueueNode;
+            QueueNode<T> firstNode = refInQueueNode;
+            QueueNode<T> auxNode = refInQueueNode;
 
             while (true) {
                 if (firstNode.getRefNode() != null) {
@@ -59,7 +59,7 @@ public class Queue<T> {
     @Override
     public String toString() {
         String returnString = "";
-        Node<T> auxNod = refInQueueNode;
+        QueueNode<T> auxNod = refInQueueNode;
 
         if (refInQueueNode != null){
             while(true){

@@ -88,7 +88,7 @@ public class LinkedList<T> {
         return refEnterNode;
     }
 
-    public void setReferenciaEntrada(LinkedNode<T> refEnterNode) {
+    public void setRefEnterNode(LinkedNode<T> refEnterNode) {
         this.refEnterNode = refEnterNode;
     }
 
@@ -97,7 +97,7 @@ public class LinkedList<T> {
         String returnString = "";
         LinkedNode<T> auxLinkedNode = refEnterNode;
         for(int i = 0; i < size(); i++){
-            returnString += "[No{conteudo=" + auxLinkedNode.getObject() +"}]--->";
+            returnString += "[No{value=" + auxLinkedNode.getObject() +"}]--->";
             auxLinkedNode = auxLinkedNode.getNextNode();
         }
         returnString += "null";

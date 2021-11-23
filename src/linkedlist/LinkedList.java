@@ -41,14 +41,11 @@ public class LinkedList<T> {
 
         LinkedNode<T> auxLinkedNode = refEnterNode;
 
-        // TODO: testar este laço. Pode haver um erro na inclusão do segundo valor, no
-        // índice 1
         for (int i = 0; i < this.size() - 1; i++) {
             auxLinkedNode = auxLinkedNode.getNextNode();
         }
 
         auxLinkedNode.setNextNode(linkedNode);
-
     }
 
     public T get(int index) {

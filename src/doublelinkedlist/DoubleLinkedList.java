@@ -118,6 +118,7 @@ public class DoubleLinkedList<T> {
             returnString += "[No{value=" + auxDoubleLinkedListNode.getObject() +"}]--->";
             auxDoubleLinkedListNode = auxDoubleLinkedListNode.getNextNode();
         }
+        returnString += "null";
         return returnString;
     }
 }
